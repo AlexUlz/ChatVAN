@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatVAN", "ChatVAN\ChatVAN.csproj", "{6998A328-0E30-4CCD-A10A-BBFD751CC748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleshipGameFORMS", "..\BattleshipGameFORMS\BattleshipGameFORMS\BattleshipGameFORMS.csproj", "{D69D64CA-9A3D-46B6-88C1-D83EC091B0DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6998A328-0E30-4CCD-A10A-BBFD751CC748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6998A328-0E30-4CCD-A10A-BBFD751CC748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6998A328-0E30-4CCD-A10A-BBFD751CC748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6998A328-0E30-4CCD-A10A-BBFD751CC748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D69D64CA-9A3D-46B6-88C1-D83EC091B0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69D64CA-9A3D-46B6-88C1-D83EC091B0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69D64CA-9A3D-46B6-88C1-D83EC091B0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69D64CA-9A3D-46B6-88C1-D83EC091B0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB5A87BB-2901-452B-AA4D-8F7ACB6B1652}
+	EndGlobalSection
+EndGlobal

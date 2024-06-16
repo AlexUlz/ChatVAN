@@ -1,0 +1,14 @@
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\bin\Debug\ChatVAN.exe.config
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\bin\Debug\ChatVAN.exe
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\bin\Debug\ChatVAN.pdb
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.csproj.AssemblyReference.cache
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.Form1.resources
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.Properties.Resources.resources
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.csproj.GenerateResource.cache
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.csproj.CoreCompileInputs.cache
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.exe
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.pdb
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\bin\Debug\BattleshipGameFORMS.exe
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\bin\Debug\BattleshipGameFORMS.pdb
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\bin\Debug\BattleshipGameFORMS.exe.config
+C:\Users\zerom\source\repos\ChatVAN\ChatVAN\obj\Debug\ChatVAN.csproj.Up2Date

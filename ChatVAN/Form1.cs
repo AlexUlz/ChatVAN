@@ -5,6 +5,10 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Media;
+using System.Drawing;
+using System.Drawing.Imaging;
+using Timer = System.Windows.Forms.Timer;
 
 namespace ChatVAN
 {
@@ -16,15 +20,71 @@ namespace ChatVAN
         private Thread listenThread;
         private Thread clientThread;
 
+        private Timer fadeOutTimer;
+        private float opacity;
+
         public Form1()
         {
             InitializeComponent();
             button1.Click += Button1_Click;
             button2.Click += Button2_Click;
             textBox1.KeyDown += TextBox1_KeyDown;
+
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\zerom\Downloads\y2mate.com-Playstation-2-Startup-Noise.wav");
+            simpleSound.Play();
+
+
+            // Set the initial opacity
+            opacity = 1.0f;
+
+            // Initialize the Timer
+            fadeOutTimer = new Timer
+            {
+                Interval = 30 // Adjust the interval for smoother transition
+            };
+            fadeOutTimer.Tick += new EventHandler(FadeOutTimer_Tick);
+
+            // Start the transition after 2 seconds
+            var startTimer = new Timer { Interval = 6000 };
+            startTimer.Tick += (s, e) =>
+            {
+                startTimer.Stop();
+                fadeOutTimer.Start();
+            };
+            startTimer.Start();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void FadeOutTimer_Tick(object sender, EventArgs e)
+        {
+            if (opacity > 0)
+            {
+                opacity -= 0.01f; // Adjust the decrement for smoother/faster transition
+                pictureBox1.Image = AdjustImageOpacity(pictureBox1.Image, opacity);
+            }
+            else
+            {
+                fadeOutTimer.Stop();
+                pictureBox1.Hide();
+            }
+        }
+
+        public static Bitmap AdjustImageOpacity(Image image, float opacity)
+        {
+            Bitmap bmp = new Bitmap(image.Width, image.Height);
+            using (Graphics gfx = Graphics.FromImage(bmp))
+            {
+                ColorMatrix matrix = new ColorMatrix();
+                matrix.Matrix33 = opacity;
+                ImageAttributes attributes = new ImageAttributes();
+                attributes.SetColorMatrix(matrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+                gfx.DrawImage(image, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
+            }
+            return bmp;
+        }
+    
+
+
+    private void Button1_Click(object sender, EventArgs e)
         {
             int port;
             if (int.TryParse(textBox2.Text, out port))
